@@ -1,0 +1,34 @@
+fetch('https://mediafiles.botpress.cloud/086d55e9-f134-4d48-b465-d8a8f8551987/webchat/v2/theme.json')
+.then(response => response.json())
+.then(data => {
+  window.botpress.init({
+  "theme": data,
+  "clientId": "ca038910-b818-4b52-b7eb-abaedae512ae",
+  "botId": "086d55e9-f134-4d48-b465-d8a8f8551987",
+  "style": "https://mediafiles.botpress.cloud/086d55e9-f134-4d48-b465-d8a8f8551987/webchat/v2/style.css",
+  "configuration": {
+    "botDescription": "Sou um atendente virtual para facilitar sua interação com o sistema SIGEN.",
+    "botName": "SIGEN Virtual",
+    "website": {
+      "title": "https://sigen.cofen.gov.br/",
+      "link": "https://sigen.cofen.gov.br/"
+    }
+  }
+});
+})
+.catch(e => {
+  window.botpress.init({
+  "clientId": "ca038910-b818-4b52-b7eb-abaedae512ae",
+  "botId": "086d55e9-f134-4d48-b465-d8a8f8551987",
+  "style": "https://mediafiles.botpress.cloud/086d55e9-f134-4d48-b465-d8a8f8551987/webchat/v2/style.css",
+  "configuration": {
+    "botDescription": "Sou um atendente virtual para facilitar sua interação com o sistema SIGEN.",
+    "botName": "SIGEN Virtual",
+    "website": {
+      "title": "https://sigen.cofen.gov.br/",
+      "link": "https://sigen.cofen.gov.br/"
+    }
+  }
+});
+  console.error(e);
+});

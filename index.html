@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEN</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        border: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100%;
+        height: 110vh;
+        background-image: linear-gradient(#DEECF0,#C7DCE6);
+        overflow: hidden;
+        position: relative;
+    }
+    img{
+        position: absolute;
+        width: 50%;
+    }
+    .home{
+        width: 25%;
+        bottom: 8%;
+        left: 10%;
+        z-index: 2;
+    }
+    .imgEsquerda{
+        left: -25%;
+        bottom: 0;
+
+    }
+    .imgDireita{
+        right: 4%;
+        bottom: 0;
+    }
+    .logo{
+        width: 10%;
+        top: 5%;
+        left: 0;
+        right: 0;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        text-align: center; /* Centraliza o texto dentro do elemento */
+    }
+    nav{
+        width: 90%;
+        height: 6%;
+        background-color: #fff;
+        position:relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 20%;
+        left: 0;
+        right: 0;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        text-align: center; /* Centraliza o texto dentro do elemento */
+        border-radius: 4px;
+        box-shadow: 1px 2px 6px gray;
+        flex-direction: row;
+    
+    }
+    .btnNav{
+        width: 20%;
+        height: 100%;
+        margin: auto;
+        background-color: antiquewhite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+</style>
+<body>
+    <img
+    class="logo" src="./referencia/SIGEN_files/logo-cofen.png" alt="">
+    <nav>
+        <div class="btnNav">
+            <div class="btnLeft"></div>
+            <div class="btnRigth"></div>
+        </div>
+        <div class="btnNav">
+            <div class="btnLeft"></div>
+            <div class="btnRigth"></div>
+        </div>
+        <div class="btnNav">
+            <div class="btnLeft"></div>
+            <div class="btnRigth"></div>
+        </div>
+    </nav>
+    <img class="home" src="./referencia/SIGEN_files/home-bg.png" alt="">
+    <img class="imgDireita" src="./referencia/SIGEN_files/linhas-direita.png" alt="">
+    <img class="imgEsquerda" src="./referencia/SIGEN_files/linhas-esquerda.png" alt="">
+</body>
+</html>

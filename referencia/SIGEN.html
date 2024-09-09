@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>SIGEN</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <link rel="icon" type="image/x-icon" href="https://sigen.cofen.gov.br/favicon.ico">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <!--<base href="/">--><base href=".">
+
+    <!-- ================ Angular Material begin =============== -->
+    <link href="./SIGEN_files/icon" rel="stylesheet">
+    <style>
+        .error-snackbar {
+            white-space: pre-wrap
+        }
+        .bp-widget-widget {
+            left: 0;
+            right: auto;
+        }
+    </style>
+    <!-- ================ Angular Material end ================= -->
+
+    <script src="./SIGEN_files/inject.js.download"></script><link rel="stylesheet" href="data:text/css;base64,Kiw6OmJlZm9yZSw6OmFmdGVyey0tMWU0cGJqNDowOy0tMTQyYWRtYzowOy0tOW91YXd5OjA7LS13bmxiMnI6MDstLW80aXIyZDowOy0tdmtna2Y4OjE7LS0xbGZmMDRnOjE7LS1tZm9nZ2I6dHJhbnNsYXRlWCh2YXIoLS0xZTRwYmo0KSkgdHJhbnNsYXRlWSh2YXIoLS0xNDJhZG1jKSkgcm90YXRlKHZhcigtLTlvdWF3eSkpIHNrZXdYKHZhcigtLXdubGIycikpIHNrZXdZKHZhcigtLW80aXIyZCkpIHNjYWxlWCh2YXIoLS12a2drZjgpKSBzY2FsZVkodmFyKC0tMWxmZjA0ZykpfTo6YmFja2Ryb3B7LS0xZTRwYmo0OjA7LS0xNDJhZG1jOjA7LS05b3Vhd3k6MDstLXdubGIycjowOy0tbzRpcjJkOjA7LS12a2drZjg6MTstLTFsZmYwNGc6MTstLW1mb2dnYjp0cmFuc2xhdGVYKHZhcigtLTFlNHBiajQpKSB0cmFuc2xhdGVZKHZhcigtLTE0MmFkbWMpKSByb3RhdGUodmFyKC0tOW91YXd5KSkgc2tld1godmFyKC0td25sYjJyKSkgc2tld1kodmFyKC0tbzRpcjJkKSkgc2NhbGVYKHZhcigtLXZrZ2tmOCkpIHNjYWxlWSh2YXIoLS0xbGZmMDRnKSl9Kiw6OmJlZm9yZSw6OmFmdGVyey0tMXMwdDNrZTowIDAgIzAwMDA7LS16eG40bnc6MCAwICMwMDAwOy0tMXFnN3dteDowIDAgIzAwMDA7LS0xNzY0bWNnOjAgMCAjMDAwMH06OmJhY2tkcm9wey0tMXMwdDNrZTowIDAgIzAwMDA7LS16eG40bnc6MCAwICMwMDAwOy0tMXFnN3dteDowIDAgIzAwMDA7LS0xNzY0bWNnOjAgMCAjMDAwMH0uXCN2azM4dGN7LS0xNDJhZG1jOjBweDt0cmFuc2Zvcm06dmFyKC0tbWZvZ2diKX0uXCNuYzFzc2t7LS0xNDJhZG1jOjVyZW07dHJhbnNmb3JtOnZhcigtLW1mb2dnYil9LlwjMXdzcTNmZXstLTFxZzd3bXg6MCA0cHggNnB4IC0xcHggcmdiYSgwLDAsMCwwLjEpLCAwIDJweCA0cHggLTJweCByZ2JhKDAsMCwwLDAuMSk7LS0xNzY0bWNnOjAgNHB4IDZweCAtMXB4IHZhcigtLWxqaDI2bSksIDAgMnB4IDRweCAtMnB4IHZhcigtLWxqaDI2bSk7Ym94LXNoYWRvdzp2YXIoLS0xczB0M2tlKSx2YXIoLS16eG40bncpLHZhcigtLTFxZzd3bXgpfS5cI2Nlejc3Yntwb3NpdGlvbjpmaXhlZH0uXCN1eDRwbWZ7aGVpZ2h0OjRyZW19LlwjMTlha3NscXtoZWlnaHQ6MTAwdmh9Llwja2hoM2F3e29wYWNpdHk6MH0uXCMxZGFtd2Vke29wYWNpdHk6MX0uXCMxbjBzdjhre3dpZHRoOjRyZW19Llwjc3ZxYm8ye3dpZHRoOjEwMCV9LlwjdDdjNWJye3RyYW5zaXRpb24tcHJvcGVydHk6Y29sb3IsYmFja2dyb3VuZC1jb2xvcixib3JkZXItY29sb3IsdGV4dC1kZWNvcmF0aW9uLWNvbG9yLGZpbGwsc3Ryb2tlLG9wYWNpdHksYm94LXNoYWRvdyx0cmFuc2Zvcm0sZmlsdGVyLGJhY2tkcm9wLWZpbHRlcjt0cmFuc2l0aW9uLXRpbWluZy1mdW5jdGlvbjpjdWJpYy1iZXppZXIoMC40LDAsMC4yLDEpO3RyYW5zaXRpb24tZHVyYXRpb246MTUwbXN9LlwjMWEwMWQ2dHtib3R0b206MHB4fS5cIzEzeHB4dnh7Ym90dG9tOjEuNXJlbX0uXCMxYTdoZW90e3RyYW5zZm9ybS1vcmlnaW46Ym90dG9tIHJpZ2h0fS5cI2I4emV3cHtwb2ludGVyLWV2ZW50czpub25lfS5cI3Y2a3dvMHtyaWdodDowcHh9LlwjOHk0YTQ2e3JpZ2h0OjEuNXJlbX0uXCNuNTl4N2x7ei1pbmRleDo5OTk4fS5cIzEyamlhdTZ7ei1pbmRleDo5OTk5fS5cIzFzeHB6a3Z7Ym9yZGVyLXJhZGl1czo5OTk5cHh9LlwjMWlkeXk0cXtib3JkZXItcmFkaXVzOjAuNXJlbX0uXCN0bDBoamE6aG92ZXJ7LS12a2drZjg6MS4xOy0tMWxmZjA0ZzoxLjE7dHJhbnNmb3JtOnZhcigtLW1mb2dnYil9LlwjMWpuemN5azpob3ZlcnstLTFxZzd3bXg6MCAxMHB4IDE1cHggLTNweCByZ2JhKDAsMCwwLDAuMSksIDAgNHB4IDZweCAtNHB4IHJnYmEoMCwwLDAsMC4xKTstLTE3NjRtY2c6MCAxMHB4IDE1cHggLTNweCB2YXIoLS1samgyNm0pLCAwIDRweCA2cHggLTRweCB2YXIoLS1samgyNm0pO2JveC1zaGFkb3c6dmFyKC0tMXMwdDNrZSksdmFyKC0tenhuNG53KSx2YXIoLS0xcWc3d214KX0uXCMxaGNmNjk5OmFjdGl2ZXstLXZrZ2tmODowLjk7LS0xbGZmMDRnOjAuOTt0cmFuc2Zvcm06dmFyKC0tbWZvZ2diKX1AbWVkaWEgKG1pbi13aWR0aDo3NjhweCl7LlwjMWJiNTQyM3toZWlnaHQ6bWluKDcwMHB4LDEwMCUgLSAxMjBweCl9fUBtZWRpYSAobWluLXdpZHRoOjc2OHB4KXsuXCMxeWtna3E0e3dpZHRoOjQwMHB4fX1AbWVkaWEgKG1pbi13aWR0aDo3NjhweCl7LlwjMWw1eTQ5bntib3R0b206NnJlbX19QG1lZGlhIChtaW4td2lkdGg6NzY4cHgpey5cI2VwMnpnZ3ttYXgtaGVpZ2h0OjcwMHB4fX1AbWVkaWEgKG1pbi13aWR0aDo3NjhweCl7LlwjMXkwbzh6dHtyaWdodDoxLjVyZW19fQ==" id="botpress-global-style">
+
+<link rel="stylesheet" href="./SIGEN_files/styles.6919ceed51e64152.css"><style>.environment-banner[_ngcontent-ayn-c601] {
+  color: white;
+  background-color: tomato;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  z-index: 10000;
+}</style><style>#home-drawer[_ngcontent-ayn-c81] {
+  display: none;
+}
+#home-drawer[_ngcontent-ayn-c81]   mat-icon[_ngcontent-ayn-c81] {
+  color: unset;
+}
+#home-drawer[_ngcontent-ayn-c81]   mat-expansion-panel[_ngcontent-ayn-c81] {
+  box-shadow: none;
+}
+#home-drawer[_ngcontent-ayn-c81]   mat-expansion-panel[_ngcontent-ayn-c81]   mat-icon[_ngcontent-ayn-c81] {
+  margin-right: 16px;
+}
+#home-drawer[_ngcontent-ayn-c81]   mat-expansion-panel-header[_ngcontent-ayn-c81] {
+  padding: 0 16px;
+}
+#home-content[_ngcontent-ayn-c81] {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#home-img-menu-container[_ngcontent-ayn-c81] {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+#home-logo[_ngcontent-ayn-c81] {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  width: 200px;
+  text-decoration: none;
+}
+#home-menu-container-mobile[_ngcontent-ayn-c81] {
+  display: none;
+  background: transparent;
+  align-items: center;
+}
+#home-menu-container-mobile[_ngcontent-ayn-c81]   a[_ngcontent-ayn-c81] {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  margin-left: 10px;
+}
+#home-menu-container[_ngcontent-ayn-c81] {
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  right: 150px;
+  width: auto;
+}
+#home-menu-container[_ngcontent-ayn-c81]   button[_ngcontent-ayn-c81], #home-menu-container[_ngcontent-ayn-c81]   a[_ngcontent-ayn-c81] {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+#home-info-container[_ngcontent-ayn-c81] {
+  margin: 10px 0 0;
+  padding: 50px 150px;
+}
+#home-info-container[_ngcontent-ayn-c81]   .custom-info-card[_ngcontent-ayn-c81] {
+  height: 300px;
+}
+.image-container[_ngcontent-ayn-c81] {
+  width: 70%;
+  max-width: 500px;
+  position: fixed;
+  bottom: 0;
+}
+@media screen and (min-width: 769px) {
+  .image-container[_ngcontent-ayn-c81] {
+    margin: 0 3rem;
+  }
+}
+@media screen and (max-width: 769px) {
+  .image-container[_ngcontent-ayn-c81] {
+    margin: 0 5rem;
+  }
+}
+.responsive-image[_ngcontent-ayn-c81] {
+  width: 100%;
+  height: auto;
+  border-style: none;
+  max-width: 600px;
+  min-width: 350px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+.linhas-esquerda[_ngcontent-ayn-c81] {
+  width: 600px;
+  height: auto;
+  border-style: none;
+  position: absolute;
+  bottom: 23px;
+  z-index: -1;
+  left: -311px;
+}
+.linhas-direita[_ngcontent-ayn-c81] {
+  width: 1100px;
+  height: auto;
+  border-style: none;
+  position: absolute;
+  bottom: -165px;
+  z-index: -1;
+  left: 600px;
+}
+@media screen and (max-width: 900px) {
+  #home-menu-container[_ngcontent-ayn-c81]   button[_ngcontent-ayn-c81], #home-menu-container[_ngcontent-ayn-c81]   a[_ngcontent-ayn-c81] {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #home-drawer[_ngcontent-ayn-c81] {
+    display: unset;
+  }
+
+  #home-img-menu-container[_ngcontent-ayn-c81] {
+    height: 200px;
+  }
+
+  #home-menu-container[_ngcontent-ayn-c81] {
+    display: none;
+  }
+
+  #home-menu-container-mobile[_ngcontent-ayn-c81] {
+    display: flex;
+  }
+
+  #home-info-container[_ngcontent-ayn-c81] {
+    padding: 30px 30px;
+  }
+}</style><style></style><style>.mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-container-has-open{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:background-color,visibility}.cdk-high-contrast-active .mat-drawer-backdrop{opacity:.5}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-transition .mat-drawer-content{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%, 0, 0)}.cdk-high-contrast-active .mat-drawer,.cdk-high-contrast-active [dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}.cdk-high-contrast-active [dir=rtl] .mat-drawer,.cdk-high-contrast-active .mat-drawer.mat-drawer-end{border-left:solid 1px currentColor;border-right:none}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer{transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer.mat-drawer-end{left:0;right:auto;transform:translate3d(-100%, 0, 0)}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto;-webkit-overflow-scrolling:touch}.mat-sidenav-fixed{position:fixed}
+</style><style>.mat-expansion-panel{box-sizing:content-box;display:block;margin:0;border-radius:4px;overflow:hidden;transition:margin 225ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);position:relative}.mat-accordion .mat-expansion-panel:not(.mat-expanded),.mat-accordion .mat-expansion-panel:not(.mat-expansion-panel-spacing){border-radius:0}.mat-accordion .mat-expansion-panel:first-of-type{border-top-right-radius:4px;border-top-left-radius:4px}.mat-accordion .mat-expansion-panel:last-of-type{border-bottom-right-radius:4px;border-bottom-left-radius:4px}.cdk-high-contrast-active .mat-expansion-panel{outline:solid 1px}.mat-expansion-panel.ng-animate-disabled,.ng-animate-disabled .mat-expansion-panel,.mat-expansion-panel._mat-animation-noopable{transition:none}.mat-expansion-panel-content{display:flex;flex-direction:column;overflow:visible}.mat-expansion-panel-body{padding:0 24px 16px}.mat-expansion-panel-spacing{margin:16px 0}.mat-accordion>.mat-expansion-panel-spacing:first-child,.mat-accordion>*:first-child:not(.mat-expansion-panel) .mat-expansion-panel-spacing{margin-top:0}.mat-accordion>.mat-expansion-panel-spacing:last-child,.mat-accordion>*:last-child:not(.mat-expansion-panel) .mat-expansion-panel-spacing{margin-bottom:0}.mat-action-row{border-top-style:solid;border-top-width:1px;display:flex;flex-direction:row;justify-content:flex-end;padding:16px 8px 16px 24px}.mat-action-row button.mat-button-base,.mat-action-row button.mat-mdc-button-base{margin-left:8px}[dir=rtl] .mat-action-row button.mat-button-base,[dir=rtl] .mat-action-row button.mat-mdc-button-base{margin-left:0;margin-right:8px}
+</style><style>.mat-expansion-panel-header{display:flex;flex-direction:row;align-items:center;padding:0 24px;border-radius:inherit;transition:height 225ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-expansion-panel-header._mat-animation-noopable{transition:none}.mat-expansion-panel-header:focus,.mat-expansion-panel-header:hover{outline:none}.mat-expansion-panel-header.mat-expanded:focus,.mat-expansion-panel-header.mat-expanded:hover{background:inherit}.mat-expansion-panel-header:not([aria-disabled=true]){cursor:pointer}.mat-expansion-panel-header.mat-expansion-toggle-indicator-before{flex-direction:row-reverse}.mat-expansion-panel-header.mat-expansion-toggle-indicator-before .mat-expansion-indicator{margin:0 16px 0 0}[dir=rtl] .mat-expansion-panel-header.mat-expansion-toggle-indicator-before .mat-expansion-indicator{margin:0 0 0 16px}.mat-content{display:flex;flex:1;flex-direction:row;overflow:hidden}.mat-expansion-panel-header-title,.mat-expansion-panel-header-description{display:flex;flex-grow:1;margin-right:16px;align-items:center}[dir=rtl] .mat-expansion-panel-header-title,[dir=rtl] .mat-expansion-panel-header-description{margin-right:0;margin-left:16px}.mat-expansion-panel-header-description{flex-grow:2}.mat-expansion-indicator::after{border-style:solid;border-width:0 2px 2px 0;content:"";display:inline-block;padding:3px;transform:rotate(45deg);vertical-align:middle}.cdk-high-contrast-active .mat-expansion-panel .mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled=true])::before,.cdk-high-contrast-active .mat-expansion-panel .mat-expansion-panel-header.cdk-program-focused:not([aria-disabled=true])::before,.cdk-high-contrast-active .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true])::before{top:0;left:0;right:0;bottom:0;position:absolute;box-sizing:border-box;pointer-events:none;border:3px solid;border-radius:4px;content:""}.cdk-high-contrast-active .mat-expansion-panel-content{border-top:1px solid;border-top-left-radius:0;border-top-right-radius:0}
+</style><style>.mat-icon{-webkit-user-select:none;-moz-user-select:none;user-select:none;background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1, 1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}
+</style><style>.mat-divider{display:block;margin:0;border-top-width:1px;border-top-style:solid}.mat-divider.mat-divider-vertical{border-top:0;border-right-width:1px;border-right-style:solid}.mat-divider.mat-divider-inset{margin-left:80px}[dir=rtl] .mat-divider.mat-divider-inset{margin-left:auto;margin-right:80px}
+</style><style>.cdk-high-contrast-active .mat-toolbar{outline:solid 1px}.mat-toolbar-row,.mat-toolbar-single-row{display:flex;box-sizing:border-box;padding:0 16px;width:100%;flex-direction:row;align-items:center;white-space:nowrap}.mat-toolbar-multiple-rows{display:flex;box-sizing:border-box;flex-direction:column;width:100%}
+</style><style>.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:.04}@media(hover: none){.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-icon-button,.mat-stroked-button,.mat-flat-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-button.mat-button-disabled,.mat-icon-button.mat-button-disabled,.mat-stroked-button.mat-button-disabled,.mat-flat-button.mat-button-disabled{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button.mat-button-disabled{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-ripple.mat-ripple,.mat-stroked-button .mat-button-focus-overlay{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab.mat-button-disabled{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab.mat-button-disabled{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button i,.mat-icon-button .mat-icon{line-height:24px}.mat-button-ripple.mat-ripple,.mat-button-focus-overlay{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-ripple.mat-ripple:not(:empty){transform:translateZ(0)}.mat-button-focus-overlay{opacity:0;transition:opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:inline-flex;justify-content:center;align-items:center;font-size:inherit;width:2.5em;height:2.5em}.cdk-high-contrast-active .mat-button,.cdk-high-contrast-active .mat-flat-button,.cdk-high-contrast-active .mat-raised-button,.cdk-high-contrast-active .mat-icon-button,.cdk-high-contrast-active .mat-fab,.cdk-high-contrast-active .mat-mini-fab{outline:solid 1px}.cdk-high-contrast-active .mat-button-base.cdk-keyboard-focused,.cdk-high-contrast-active .mat-button-base.cdk-program-focused{outline:solid 3px}
+</style><style>mat-menu{display:none}.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0;min-height:64px}.mat-menu-panel.ng-animating{pointer-events:none}.cdk-high-contrast-active .mat-menu-panel{outline:solid 1px}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}.mat-menu-item[disabled]{pointer-events:none}.cdk-high-contrast-active .mat-menu-item{margin-top:1px}.cdk-high-contrast-active .mat-menu-item.cdk-program-focused,.cdk-high-contrast-active .mat-menu-item.cdk-keyboard-focused,.cdk-high-contrast-active .mat-menu-item-highlighted{outline:dotted 1px}.mat-menu-item-submenu-trigger{padding-right:32px}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}.mat-menu-submenu-icon{position:absolute;top:50%;right:16px;transform:translateY(-50%);width:5px;height:10px;fill:currentColor}[dir=rtl] .mat-menu-submenu-icon{right:auto;left:16px;transform:translateY(-50%) scaleX(-1)}.cdk-high-contrast-active .mat-menu-submenu-icon{fill:CanvasText}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}
+</style><style>.mat-dialog-container{display:block;padding:24px;border-radius:4px;box-sizing:border-box;overflow:auto;outline:0;width:100%;height:100%;min-height:inherit;max-height:inherit}.cdk-high-contrast-active .mat-dialog-container{outline:solid 1px}.mat-dialog-content{display:block;margin:0 -24px;padding:0 24px;max-height:65vh;overflow:auto;-webkit-overflow-scrolling:touch}.mat-dialog-title{margin:0 0 20px;display:block}.mat-dialog-actions{padding:8px 0;display:flex;flex-wrap:wrap;min-height:52px;align-items:center;box-sizing:content-box;margin-bottom:-24px}.mat-dialog-actions[align=end]{justify-content:flex-end}.mat-dialog-actions[align=center]{justify-content:center}.mat-dialog-actions .mat-button-base+.mat-button-base,.mat-dialog-actions .mat-mdc-button-base+.mat-mdc-button-base{margin-left:8px}[dir=rtl] .mat-dialog-actions .mat-button-base+.mat-button-base,[dir=rtl] .mat-dialog-actions .mat-mdc-button-base+.mat-mdc-button-base{margin-left:0;margin-right:8px}
+</style><style>.dialog[_ngcontent-ayn-c79], .mat-dialog-container[_ngcontent-ayn-c79] {
+  width: 100%;
+  background-color: rgba(230, 73, 37, 0.8) !important;
+  color: white;
+}
+.dialog[_ngcontent-ayn-c79]   button[_ngcontent-ayn-c79], .mat-dialog-container[_ngcontent-ayn-c79]   button[_ngcontent-ayn-c79] {
+  background-color: #002fa7;
+}
+.dialog[_ngcontent-ayn-c79]   a[_ngcontent-ayn-c79], .mat-dialog-container[_ngcontent-ayn-c79]   a[_ngcontent-ayn-c79] {
+  text-decoration: none;
+}</style></head>
+<body class="mat-typography">
+<app-root _nghost-ayn-c601="" ng-version="13.2.0"><!----><!----><!----><router-outlet _ngcontent-ayn-c601=""></router-outlet><app-home-publico _nghost-ayn-c81="" class="ng-star-inserted"><mat-sidenav-container _ngcontent-ayn-c81="" class="mat-drawer-container mat-sidenav-container" style="background-image: linear-gradient(to bottom, #DEECF0, #C7DCE6);"><div class="mat-drawer-backdrop ng-star-inserted"></div><!----><div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><mat-sidenav _ngcontent-ayn-c81="" tabindex="-1" mode="over" id="home-drawer" class="mat-drawer mat-sidenav ng-tns-c72-0 ng-trigger ng-trigger-transform mat-drawer-over ng-star-inserted" style="box-shadow: none; visibility: hidden;"><div cdkscrollable="" class="mat-drawer-inner-container ng-tns-c72-0"><mat-expansion-panel _ngcontent-ayn-c81="" class="mat-expansion-panel ng-tns-c55-1 ng-tns-c72-0 ng-star-inserted" style=""><mat-expansion-panel-header _ngcontent-ayn-c81="" role="button" class="mat-expansion-panel-header mat-focus-indicator ng-tns-c57-2 ng-tns-c55-1 ng-star-inserted" id="mat-expansion-panel-header-0" tabindex="0" aria-controls="cdk-accordion-child-0" aria-expanded="false" aria-disabled="false"><span class="mat-content ng-tns-c57-2"><mat-panel-title _ngcontent-ayn-c81="" class="mat-expansion-panel-header-title ng-tns-c57-2"><mat-icon _ngcontent-ayn-c81="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">dashboard</mat-icon> Serviços online </mat-panel-title></span><span class="mat-expansion-indicator ng-tns-c57-2 ng-trigger ng-trigger-indicatorRotate ng-star-inserted" style="transform: rotate(0deg);"></span><!----></mat-expansion-panel-header><div role="region" class="mat-expansion-panel-content ng-tns-c55-1 ng-trigger ng-trigger-bodyExpansion" id="cdk-accordion-child-0" aria-labelledby="mat-expansion-panel-header-0" style="height: 0px; visibility: hidden;"><div class="mat-expansion-panel-body ng-tns-c55-1"><a _ngcontent-ayn-c81="" mat-menu-item="" class="mat-focus-indicator ng-tns-c55-1 mat-menu-item" role="menuitem" tabindex="0" aria-disabled="false">Inscrição<div matripple="" class="mat-ripple mat-menu-ripple"></div><!----></a><a _ngcontent-ayn-c81="" mat-menu-item="" routerlink="/registro/acompanhamento-protocolo" class="mat-focus-indicator ng-tns-c55-1 mat-menu-item" role="menuitem" tabindex="0" aria-disabled="false" href="https://sigen.cofen.gov.br/registro/acompanhamento-protocolo">Acompanhamento de Protocolo<div matripple="" class="mat-ripple mat-menu-ripple"></div><!----></a><a _ngcontent-ayn-c81="" mat-menu-item="" class="mat-focus-indicator ng-tns-c55-1 mat-menu-item" role="menuitem" tabindex="0" aria-disabled="false" href="https://sigen.cofen.gov.br/profissional/consultar">Consultar profissional<div matripple="" class="mat-ripple mat-menu-ripple"></div><!----></a><!----></div></div></mat-expansion-panel><!----><mat-divider _ngcontent-ayn-c81="" role="separator" class="mat-divider ng-tns-c72-0 mat-divider-horizontal" aria-orientation="horizontal"></mat-divider><mat-expansion-panel _ngcontent-ayn-c81="" class="mat-expansion-panel ng-tns-c55-3 ng-tns-c72-0 ng-star-inserted" style=""><mat-expansion-panel-header _ngcontent-ayn-c81="" role="button" class="mat-expansion-panel-header mat-focus-indicator ng-tns-c57-4 ng-tns-c55-3 ng-star-inserted" id="mat-expansion-panel-header-1" tabindex="0" aria-controls="cdk-accordion-child-1" aria-expanded="false" aria-disabled="false"><span class="mat-content ng-tns-c57-4"><mat-panel-title _ngcontent-ayn-c81="" class="mat-expansion-panel-header-title ng-tns-c57-4"><mat-icon _ngcontent-ayn-c81="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">support_agent</mat-icon> Canais </mat-panel-title></span><span class="mat-expansion-indicator ng-tns-c57-4 ng-trigger ng-trigger-indicatorRotate ng-star-inserted" style="transform: rotate(0deg);"></span><!----></mat-expansion-panel-header><div role="region" class="mat-expansion-panel-content ng-tns-c55-3 ng-trigger ng-trigger-bodyExpansion" id="cdk-accordion-child-1" aria-labelledby="mat-expansion-panel-header-1" style="height: 0px; visibility: hidden;"><div class="mat-expansion-panel-body ng-tns-c55-3"><h4 _ngcontent-ayn-c81="" class="menu-title ng-tns-c55-3">Fale conosco</h4><mat-divider _ngcontent-ayn-c81="" role="separator" class="mat-divider ng-tns-c55-3 mat-divider-horizontal" aria-orientation="horizontal"></mat-divider><!----></div></div></mat-expansion-panel><!----><mat-divider _ngcontent-ayn-c81="" role="separator" class="mat-divider ng-tns-c72-0 mat-divider-horizontal" aria-orientation="horizontal"></mat-divider><a _ngcontent-ayn-c81="" routerlink="/privado" mat-menu-item="" class="mat-focus-indicator ng-tns-c72-0 mat-menu-item" role="menuitem" tabindex="0" aria-disabled="false" href="https://sigen.cofen.gov.br/privado"><mat-icon _ngcontent-ayn-c81="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">dns</mat-icon> Acesse o sistema <div matripple="" class="mat-ripple mat-menu-ripple"></div><!----></a></div></mat-sidenav><div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><mat-sidenav-content _ngcontent-ayn-c81="" id="home-content" class="mat-drawer-content mat-sidenav-content"><div _ngcontent-ayn-c81="" class="image-container"><img _ngcontent-ayn-c81="" src="./SIGEN_files/home-bg.png" alt="Responsive Image" class="responsive-image"><img _ngcontent-ayn-c81="" src="./SIGEN_files/linhas-esquerda.png" alt="Responsive Image" class="linhas-esquerda"><img _ngcontent-ayn-c81="" src="./SIGEN_files/linhas-direita.png" alt="Responsive Image" class="linhas-direita"></div><div _ngcontent-ayn-c81="" id="home-img-menu-container"><mat-toolbar _ngcontent-ayn-c81="" id="home-menu-container-mobile" class="mat-toolbar mat-toolbar-single-row"><button _ngcontent-ayn-c81="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base"><span class="mat-button-wrapper"><mat-icon _ngcontent-ayn-c81="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">menu</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button></mat-toolbar><div _ngcontent-ayn-c81="" style="display: flex; justify-content: center;"><a _ngcontent-ayn-c81="" routerlink="/" id="home-logo" href="https://sigen.cofen.gov.br/"><img _ngcontent-ayn-c81="" src="./SIGEN_files/logo-cofen.png" alt="Logo Cofen" style="max-width: 200px;"></a></div><mat-toolbar _ngcontent-ayn-c81="" id="home-menu-container" class="mat-toolbar mat-toolbar-single-row"><button _ngcontent-ayn-c81="" aria-haspopup="true" mat-flat-button="" class="mat-focus-indicator mat-menu-trigger mat-flat-button mat-button-base"><span class="mat-button-wrapper"><mat-icon _ngcontent-ayn-c81="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">dashboard</mat-icon> Serviços online </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></button><!----><mat-menu _ngcontent-ayn-c81="" class="ng-tns-c65-5 ng-star-inserted"><!----></mat-menu><mat-divider _ngcontent-ayn-c81="" role="separator" class="mat-divider mat-divider-vertical" aria-orientation="vertical"></mat-divider><button _ngcontent-ayn-c81="" aria-haspopup="true" mat-flat-button="" class="mat-focus-indicator mat-menu-trigger mat-flat-button mat-button-base"><span class="mat-button-wrapper"><mat-icon _ngcontent-ayn-c81="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">support_agent</mat-icon> Canais </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></button><!----><mat-menu _ngcontent-ayn-c81="" class="ng-tns-c65-8 ng-star-inserted"><!----></mat-menu><mat-divider _ngcontent-ayn-c81="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider><button _ngcontent-ayn-c81="" aria-haspopup="true" mat-flat-button="" class="mat-focus-indicator mat-menu-trigger mat-flat-button mat-button-base"><span class="mat-button-wrapper"><mat-icon _ngcontent-ayn-c81="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">dns</mat-icon> Acesse o sistema </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></button><!----><mat-menu _ngcontent-ayn-c81="" class="ng-tns-c65-9 ng-star-inserted"><!----></mat-menu></mat-toolbar></div><div _ngcontent-ayn-c81="" id="home-info-container" class="flex-grow-1 d-flex ml-0"><div _ngcontent-ayn-c81="" class="row wrap width-full"><!----></div></div></mat-sidenav-content><!----></mat-sidenav-container></app-home-publico><!----></app-root>
+<script src="./SIGEN_files/runtime.d96bd0b4e0651d91.js.download" type="module"></script><script src="./SIGEN_files/polyfills.a09c620586df1045.js.download" type="module"></script><script src="./SIGEN_files/scripts.bf97435c1e4c05e0.js.download" defer=""></script><script src="./SIGEN_files/main.ea7ec1df866e6434.js.download" type="module"></script>
+
+<iframe src="./SIGEN_files/login-status-iframe.html" title="keycloak-session-iframe" style="display: none;"></iframe><div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div><script src="./SIGEN_files/config.js.download" id="botpress"></script><div class="cdk-overlay-container"></div><iframe aria-hidden="true" tabindex="-1" title="Botpress" frameborder="0" name="webchat" class="bpInitial #1wsq3fe #nc1ssk #cez77b #19akslq #khh3aw #svqbo2 #1a01d6t #1a7heot #b8zewp #v6kwo0 #12jiau6 #1idyy4q #1bb5423 #1ykgkq4 #1l5y49n #ep2zgg #1y0o8zt" src="./SIGEN_files/saved_resource.html"></iframe><iframe aria-hidden="true" tabindex="-1" title="Botpress" frameborder="0" name="fab" class="bpFab #1wsq3fe #tl0hja #1jnzcyk #1hcf699 #cez77b #ux4pmf #1n0sv8k #t7c5br #13xpxvx #8y4a46 #n59x7l #1sxpzkv" src="./SIGEN_files/saved_resource(1).html"></iframe></body></html>
