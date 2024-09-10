@@ -68,32 +68,121 @@
         width: 20%;
         height: 100%;
         margin: auto;
-        background-color: antiquewhite;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: row;
+        position: relative;
+        z-index: 4;
+    }
+    .btnLeft{
+        width: 50%;
+        height: 100%;
+        position: relative;
+        
+
+    }
+
+    .btnLeft>img{
+        width: 10%;
+        right: 2%;
+        top: 34%;
+    }
+    .btnsOpcoes{
+        position: absolute;
+        width: 80%;
+        top: 100%;
+        right:54%;
+        height:440%;
+        background-color: #fff;
+        z-index: 3;
+        border-radius:  0 0 4px 4px;
+        box-shadow: 1px 2px 6px black;
+
+    }
+    .none{
+        display: none;
+    }
+    .block{
+        display: block;
+    }
+
+    .Opcoes{
+        width: 100%;
+        height: 16%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btnOpcoesArea{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .Opcoes:hover{
+        border-bottom: 1px solid gray;
+        background-color: #eee;
+        cursor: pointer;
+    }
+    .pointer:hover{
+        cursor: pointer;
     }
 </style>
 <body>
-    <img
-    class="logo" src="./referencia/SIGEN_files/logo-cofen.png" alt="">
+    <img class="logo" src="./referencia/SIGEN_files/logo-cofen.png" alt="">
     <nav>
         <div class="btnNav">
-            <div class="btnLeft"></div>
-            <div class="btnRigth"></div>
+            <div class="btnLeft pointer" id="btnLeft"><img src="./app.svg" alt="" srcset=""></div>
+            <div class="btnRigth pointer"><b>Serviços Online</b></div>
+            <div class="btnsOpcoes none" id="btnsOpcoes">
+                <div class="btnOpcoesArea" id="btnOpcoesArea">
+                    <div class="Opcoes"><b>Autoatendimento</b></div>
+                    <div class="Opcoes"><b>Quero me inscrever</b></div>
+                    <div class="Opcoes"><b>Já sou inscrito</b></div>
+                    <div class="Opcoes"><a href="./boletoF.html">Boleto Fácil</a></div>
+                    <div class="Opcoes"><B>Acompanhamento de Protocolo</B></div>
+                    <div class="Opcoes"><B>Verificar Certidão</B></div>
+                    <div class="Opcoes"><B>Consutar profissional</B></div>
+                </div>
+            </div>
         </div>
         <div class="btnNav">
-            <div class="btnLeft"></div>
-            <div class="btnRigth"></div>
+            <div class="btnLeft"><img src="./tel.png" alt="" srcset=""></div>
+            <div class="btnRigth"><b>Canais</b></div>
         </div>
         <div class="btnNav">
-            <div class="btnLeft"></div>
-            <div class="btnRigth"></div>
+            <div class="btnLeft"><img src="./arquivos.png" alt="" srcset=""></div>
+            <div class="btnRigth"><b>Acesso ao Sistema</b></div>
         </div>
     </nav>
     <img class="home" src="./referencia/SIGEN_files/home-bg.png" alt="">
     <img class="imgDireita" src="./referencia/SIGEN_files/linhas-direita.png" alt="">
     <img class="imgEsquerda" src="./referencia/SIGEN_files/linhas-esquerda.png" alt="">
+
+    <script>
+        const btnLeft = document.getElementById('btnLeft');
+        const btnsOpcoes = document.getElementById('btnsOpcoes');
+        const btnOpcoesArea = document.getElementById('btnOpcoesArea');
+
+        // Troca a classe de none para block ao clicar no btnLeft
+        btnLeft.addEventListener('click', function() {
+            if (btnsOpcoes.classList.contains('none')) {
+                btnsOpcoes.classList.remove('none');
+                btnsOpcoes.classList.add('block');
+            } else {
+                btnsOpcoes.classList.remove('block');
+                btnsOpcoes.classList.add('none');
+            }
+        });
+
+        // Volta para a classe none quando o mouse sair do btnOpcoesArea
+        btnOpcoesArea.addEventListener('mouseleave', function() {
+            btnsOpcoes.classList.remove('block');
+            btnsOpcoes.classList.add('none');
+        });
+    </script>
 </body>
 </html>
