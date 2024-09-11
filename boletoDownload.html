@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sigen</title>
+    <title>Document</title>
     <style>
         *{
             margin: 0;
@@ -134,9 +134,10 @@
             left: 0;
             right: 0;
             top: 18%;
+            z-index: 5;
             margin: auto;
-            width: 20%;
-            height: 32%;
+            width: 40%;
+            height: 58%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -181,87 +182,19 @@
             top: 2%;
             right: 2%;            
         }
-        .error {
-            border-color: red;
-        }
+
     </style>
 </head>
 <body>
     <img class="logo" src="./referencia/SIGEN_files/logo-cofen.png" alt="">
-    <form id="FormeBoleto" class="form" action="">
-        <a href="./index.html" class="voltar">Voltar</a>
-        <h2 class="titulo">Boleto Fácil</h2>
-        <p class="resumo">Essa é a maneira mais rápida e fácil de conseguir pagar seu boleto</p>
-        <label class="Labels" for="cpf">CPF</label>
-        <input id="cpf" class="inputs" type="text">
-        <label class="Labels" for="coren">n° COREN</label>
-        <input id="coren" class="inputs" type="text" name="" id="">
-        <input class="inputs noneBorder" type="submit">
-    </form>
+    <div class="form">
+        <a href="./index.html" class="voltar"><<</a>
+        <h1>Boleto Fácil</h1>
+        <h2>Bem vindo, Enfermeiro X</h2>
+        <label for="">Escolha Anuidade</label>
+    </div>
     <img class="home" src="./referencia/SIGEN_files/home-bg.png" alt="">
     <img class="imgDireita" src="./referencia/SIGEN_files/linhas-direita.png" alt="">
     <img class="imgEsquerda" src="./referencia/SIGEN_files/linhas-esquerda.png" alt="">
-
-    <script>
-        /*
-        document.getElementById('FormeBoleto').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const cpfInput = document.getElementById('cpf');
-            const corenInput = document.getElementById('coren');
-            let isValid = true;
-
-            // Limpa as bordas vermelhas
-            cpfInput.classList.remove('error');
-            corenInput.classList.remove('error');
-
-            // Valida CPF (simplificada)
-            const cpfPattern = /^\d{11}$/;
-            if (!cpfPattern.test(cpfInput.value)) {
-                cpfInput.classList.add('error');
-                isValid = false;
-            }
-
-            // Verifica se o campo COREN está vazio
-            if (corenInput.value.trim() === '') {
-                corenInput.classList.add('error');
-                isValid = false;
-            }
-
-            if (isValid) {
-                // Se estiver tudo correto, envia o formulário
-                window.location.href = './boletoDownload.html'; // Redireciona para a próxima página
-            }
-        });*/
-        document.getElementById('FormeBoleto').addEventListener('submit', function(event) {
-
-            const inputs = document.querySelectorAll('.inputs')
-            event.preventDefault();
-            const cpfInput = document.getElementById('cpf');
-            const corenInput = document.getElementById('coren');
-            let isValid = true;
-
-            // Limpa as bordas vermelhas
-            cpfInput.classList.remove('error');
-            corenInput.classList.remove('error');
-
-            // Verifica se o valor do campo CPF é exatamente "cpf"
-            if (cpfInput.value.trim().toLowerCase() !== 'cpf') {
-                cpfInput.classList.add('error');
-                isValid = false;
-            }
-
-            // Verifica se o valor do campo COREN é exatamente "coren"
-            if (corenInput.value.trim().toLowerCase() !== 'coren') {
-                corenInput.classList.add('error');
-                isValid = false;
-            }
-
-            if (isValid) {
-                // Se estiver tudo correto, envia o formulário
-                window.location.href = './boletoDownload.html'; // Redireciona para a próxima página
-            }
-        });
-
-    </script>
 </body>
 </html>
