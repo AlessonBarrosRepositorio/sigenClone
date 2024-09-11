@@ -150,24 +150,35 @@
         .inputs{
             border: 2px solid #666;
             margin-bottom: 4%;
-            width: 90%;
-            height: 20%;
+            width: 30%;
+            height: 10%;
             border-radius: 4px;
+            position: absolute;
+            top: 38%;
         }
         .noneBorder{
             border: none;
-            width: 30%;
+            width: 26%;
+            height: 5%;
             cursor: pointer;            
             box-shadow: 1px 2px 6px #666;
         }
         .Labels{
-            margin-bottom: 4%;
+            margin-bottom: 2%;
             font-weight: 700;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 100%;
+            font-size: 200%;
+            position: absolute;
+            top: 28%;
         }
         .titulo{
-            margin-bottom: 4%;
+            position: absolute;
+            top: 4%;
+        }
+        .titulo02{
+            position: absolute;
+            top: 18%;
+            left: 4%;
         }
         .resumo{
             margin-bottom: 4%;
@@ -182,19 +193,87 @@
             top: 2%;
             right: 2%;            
         }
+        .submit{
+            position: absolute;
+            bottom: 4%;
+            right: 4%;
+
+        }
+        .qrcode{
+            position: absolute;
+            bottom: 10%;
+            width: 30%;
+            height: 36%;
+        }
+        .qrcode>img{
+            width: 100%;
+            height: 100%;
+        }
+        .imgQrCode{
+            display: none;
+        }
+        .imgQrCodeAtivado{
+            display: block;
+        }
 
     </style>
 </head>
 <body>
     <img class="logo" src="./referencia/SIGEN_files/logo-cofen.png" alt="">
-    <div class="form">
+    <form class="form">
         <a href="./index.html" class="voltar"><<</a>
-        <h1>Boleto Fácil</h1>
-        <h2>Bem vindo, Enfermeiro X</h2>
-        <label for="">Escolha Anuidade</label>
-    </div>
+        <h1 class="titulo">Boleto Fácil</h1>
+        <h2 class="titulo02">Bem vindo, Enfermeiro X.</h2>
+        <label class="Labels" for="">Escolha Anuidade</label>
+        <select class="inputs" id="itemObrigatorioCategoria" >
+        <option value="Anuidade">Anuidade</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023 negociar</option>
+        <option value="2022">2022 negociar</option>
+        <option value="2021">2021 negociar</option>
+      </select>
+      <input class="submit noneBorder" type="submit" value="Baixar boleto">
+      <div class="qrcode"><img class="imgQrCode" src="./qrcode.png" alt=""></div>
+    </form>
     <img class="home" src="./referencia/SIGEN_files/home-bg.png" alt="">
     <img class="imgDireita" src="./referencia/SIGEN_files/linhas-direita.png" alt="">
     <img class="imgEsquerda" src="./referencia/SIGEN_files/linhas-esquerda.png" alt="">
+<script>
+    // Seleciona os elementos
+    const selectElement = document.getElementById("itemObrigatorioCategoria");
+    const submitButton = document.querySelector(".submit");
+    const qrCodeImg = document.querySelector(".imgQrCode");
+    
+    // Desabilita o botão de submit no início
+    submitButton.disabled = true;
+
+    // Verifica se a opção "2024" foi selecionada
+    selectElement.addEventListener("change", function() {
+        if (selectElement.value === "2024") {
+            submitButton.disabled = false;
+        } else {
+            submitButton.disabled = true;
+        }
+    });
+
+    // Função para baixar o PDF e trocar a classe da imagem do QR code
+    submitButton.addEventListener("click", function(event) {
+        event.preventDefault();  // Evita o comportamento padrão de submit do formulário
+
+        // Exibe o QR code alterando a classe
+        qrCodeImg.classList.remove("imgQrCode");
+        qrCodeImg.classList.add("imgQrCodeAtivado");
+
+        // Faz o download do PDF (substitua pelo caminho real do PDF)
+        const pdfUrl = './boleto.pdf';  // Caminho do PDF
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = './boleto.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);  // Remove o link temporário
+    });
+</script>
+    
 </body>
 </html>
